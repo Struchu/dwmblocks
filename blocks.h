@@ -1,19 +1,18 @@
 //Modify this file to change what commands output to your statusbar, and recompile using the make command.
 static const Block blocks[] = {
 	/*Icon*/	/*Command*/		/*Update Interval*/	/*Update Signal*/
-	{"", "cat ~/.pacupdate | sed /📦0/d",					0,		9},
-	
-	{"🧠", "free -h | awk '/^Mem/ { print $3\"/\"$2 }' | sed s/i//g",	30,		0},
+        {" ", "df -h | grep \"/$\" | awk '{ print $4 \" \" }'", 60, 0},
 
-	{"", "~/bin/statusbar/volume",						0,		10},
+        {" ", "battery_status BAT0", 5, 0},
+        {" ", "battery_status BAT1", 5, 0},
 
-	{"☀", "xbacklight | sed 's/\\..*//'",					0,		11},
-	
-	{"", "~/bin/statusbar/battery",						5,		0},
+        {" ", "network_status wlp3s0", 5, 0},
 
-	{"🌡", "sensors | awk '/^temp1:/{print $2}'",				5,		0},
+        {"  ", "cat /tmp/temper.deg 2>/dev/null || echo -n \"  \"", 60, 0},
 
-	{"", "~/bin/statusbar/clock",						5,		0},
+        {" ", "mail_notify", 60, 0},
+
+        {" ", "date '+%Y-%m-%d %H:%M'", 1, 0},
 };
 
 //sets delimeter between status commands. NULL character ('\0') means no delimeter.
