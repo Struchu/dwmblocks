@@ -10,7 +10,7 @@ static const Block blocks[] = {
 
         {"  ", "cat /tmp/temper.deg 2>/dev/null || echo -n \"  \"", 60, 0},
 
-        {" ", "mail_notify", 60, 0},
+        {" ", "mail_notify", 0, 1},
 
         {" ", "date '+%Y-%m-%d %H:%M'", 1, 0},
 };
