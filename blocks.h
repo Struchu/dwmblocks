@@ -4,8 +4,7 @@ static const Block blocks[] = {
         {" ", "volume", 0, 2},
         {"  ", "df -h | grep \"/$\" | awk '{ print $4 \" \" }'", 60, 0},
 
-        {" ", "battery_status BAT0", 5, 0},
-        {" ", "battery_status BAT1", 5, 0},
+        {" ", "battery_status", 5, 0},
 
         {" ", "network_status wlp3s0", 5, 0},
 
