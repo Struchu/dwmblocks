@@ -6,7 +6,7 @@ static const Block blocks[] = {
 
         {" ", "battery_status", 5, 0},
 
-        {" ", "network_status wlp3s0", 5, 0},
+        {" ", "network_status", 5, 0},
 
         {"  ", "cat /tmp/temper.deg 2>/dev/null || echo -n \"  \"", 60, 0},
 
